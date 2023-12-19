@@ -1,4 +1,4 @@
-import { firstLastIntSum } from "./day1";
+import { firstLastIntSum } from "./day2";
 test("creates num from each first and last occurance and adds num from each item together", () => {
   expect(
     firstLastIntSum(["1abc2", "pqr3stu8vwx", "a1b2c3d4e5f", "treb7uchet"])

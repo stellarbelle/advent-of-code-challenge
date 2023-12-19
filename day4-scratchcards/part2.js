@@ -17,24 +17,6 @@ const testData = [
   "Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11",
 ];
 
-export const getTotalPoints = (rows) => {
-  let totalPoints = 0;
-  rows.forEach((row) => {
-    let points = 0;
-    const numbers = row.split(":")[1].split("|");
-    const winningNumbers = numbers[0].trim().split(" ");
-    const myNumbers = numbers[1].trim().split(" ");
-    myNumbers.forEach((num) => {
-      if (num.length && winningNumbers.includes(num)) {
-        points = points === 0 ? 1 : points * 2;
-      }
-    });
-    totalPoints += points;
-  });
-  return totalPoints;
-};
-const totalPoints = getTotalPoints(data);
-
 export const getTotalCards = (rows) => {
   let totalCards = 0;
   const cardNumbers = [];
@@ -68,5 +50,5 @@ export const getTotalCards = (rows) => {
   return totalCards;
 };
 const totalCards = getTotalCards(testData);
-console.log("totalPoints: ", totalPoints);
+
 console.log("totalCards: ", totalCards);

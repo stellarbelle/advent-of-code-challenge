@@ -1,4 +1,5 @@
-import { getTotalPoints, getTotalCards } from "./day4";
+import { getTotalPoints } from "./part1";
+import { getTotalCards } from "./part2";
 test("gets the points from all matches between winning numbers and my numbers", () => {
   expect(
     getTotalPoints([
